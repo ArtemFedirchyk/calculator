@@ -1,7 +1,7 @@
-# Simple calculator. Client - Ember.js, Polymer. Server - Node.js, Express, Mongoose 
+## Simple calculator. Client - Ember.js, Polymer. Server - Node.js, Express, Mongoose 
 
 ## Setup
 
-* git clone <>
+* git clone https://github.com/ArtemFedirchyk/calculator.git
 * `cd client && npm install && bower install`
 * `cd server && npm install`
