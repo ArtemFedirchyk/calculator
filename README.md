@@ -10,8 +10,8 @@
 
 ### Server
 
-* 'node server.js'
+* `node server.js`
 
 ### Client
 
-* 'ember serve'
+* `ember serve`
