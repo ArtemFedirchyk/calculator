@@ -1,8 +1,8 @@
 // BASE SETUP
 // call the packages we need
-var express    = require('express'),        // call express
-    app        = express(),                 // define our app using express
-    bodyParser = require('body-parser');
+var express    = require('express');        // call express
+var app        = express();                 // define our app using express
+var bodyParser = require('body-parser');
 var Calculation = require('./models/calculation'); 	// call todo model package
 
 var mongoose   = require('mongoose'); 		// call mongoose driver package
@@ -15,10 +15,10 @@ app.use(bodyParser.json());
 
 // Add CORS headers
 app.use(function (request, response, next) {
-    response.header("Access-Control-Allow-Origin", "http://localhost:4200");
-    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    response.header("Access-Control-Allow-Resource", "*");
-    response.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    response.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+    response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    response.header('Access-Control-Allow-Resource', '*');
+    response.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     next();
 });
 
@@ -60,7 +60,7 @@ router.route('/calculations')
         calculationOnServer.firstValue = request.body.calculation.firstValue;
         calculationOnServer.secondValue = request.body.calculation.secondValue;
         calculationOnServer.operand = request.body.calculation.operand;
-        calculationOnServer.result = result;
+        calculationOnServer.result = result.toString();
         
         console.log(calculationOnServer);
         
@@ -77,16 +77,6 @@ router.route('/calculations')
                 response.json({
                     calculations: calculations
                 });
-        });
-    });
-router.route('/calculations/:calculation_id')
-     // get the bear with that id (accessed at GET http://localhost:8080/api/calculations/:calculation_id)
-    .get(function (request, response) {
-        Calculation.findById(request.params.calculation_id, function (error, calculation) {
-            if (error) response.send(error);
-            response.json({
-                calculation: calculation
-            });
         });
     });
 // -----------------------------------------------------
