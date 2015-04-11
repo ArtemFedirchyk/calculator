@@ -3,7 +3,7 @@
 var express    = require('express');        // calls express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');    // calls body-pareser package
-var routes = require('./routes/index');     // calls package with routes
+var routes = require('./routes/routes');     // calls package with routes
 
 var mongoose   = require('mongoose'); 		// calls mongoose driver package
 mongoose.connect('mongodb://ember:secretpassword@ds049631.mongolab.com:49631/todo-mvc'); // connect to our database
