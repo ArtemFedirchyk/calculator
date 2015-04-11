@@ -11,6 +11,8 @@
     },
     "devDependencies": {
         "mocha": "",
-        "chai": ""
+        "chai": "",
+        "should": "",
+        "supertest": ""
     }
 }
