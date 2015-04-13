@@ -29,7 +29,7 @@ using command prompt or terminal
 ### Client
 
 * using command prompt or terminal run `ember serve` inside <b>client</b> directory
-* using browser go to http://localhost:4200/tests and you should see performing integration tests. 
+* using browser go to <b>http://localhost:4200/tests</b> and you should see performing integration tests. 
 
 P.S. For correct executing integration tests for client-app note, that server-app shold be in RUNNING mode.
 
