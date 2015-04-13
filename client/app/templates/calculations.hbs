@@ -1,37 +1,39 @@
 <div class="theme-calculator">
 
   <div class="theme-display">
-    <span>{{resultValue}}</span> {{mathematicalSymbol}} {{inputValues}}
+    <span class="result-span">{{resultValue}}</span>
+    <span class="math-symbol-span">{{mathematicalSymbol}}</span>
+    <span class="input-values-span">{{inputValues}}</span>
   </div>
   
-<div id="keys" horizontal layout>
+<div class="keys" horizontal layout>
   <div class="paper-button-numbers" flex vertical layout>
-    <paper-button flex vertical layout{{action "setInputValue" "7"}}>7</paper-button>
-    <paper-button flex vertical layout{{action "setInputValue" "4"}}>4</paper-button>
-    <paper-button flex vertical layout{{action "setInputValue" "1"}}>1</paper-button>
-    <paper-button flex vertical layout{{action "setInputValue" "."}}>.</paper-button>
+    <paper-button class="button-7" flex vertical layout{{action "setInputValue" "7"}}>7</paper-button>
+    <paper-button class="button-4" flex vertical layout{{action "setInputValue" "4"}}>4</paper-button>
+    <paper-button class="button-1" flex vertical layout{{action "setInputValue" "1"}}>1</paper-button>
+    <paper-button class="button-." flex vertical layout{{action "setInputValue" "."}}>.</paper-button>
   </div>
 
   <div class="paper-button-numbers" flex vertical layout>
-    <paper-button flex vertical layout{{action "setInputValue" "8"}}>8</paper-button>
-    <paper-button flex vertical layout{{action "setInputValue" "5"}}>5</paper-button>
-    <paper-button flex vertical layout{{action "setInputValue" "2"}}>2</paper-button>
-    <paper-button flex vertical layout{{action "setInputValue" "0"}}>0</paper-button>
+    <paper-button class="button-8" flex vertical layout{{action "setInputValue" "8"}}>8</paper-button>
+    <paper-button class="button-5" flex vertical layout{{action "setInputValue" "5"}}>5</paper-button>
+    <paper-button class="button-2" flex vertical layout{{action "setInputValue" "2"}}>2</paper-button>
+    <paper-button class="button-0" flex vertical layout{{action "setInputValue" "0"}}>0</paper-button>
   </div>
 
   <div class="paper-button-numbers" flex vertical layout>
-    <paper-button flex vertical layout{{action "setInputValue" "9"}}>9</paper-button>
-    <paper-button flex vertical layout{{action "setInputValue" "6"}}>6</paper-button>
-    <paper-button flex vertical layout{{action "setInputValue" "3"}}>3</paper-button>
-    <paper-button flex vertical layout{{action "equals" "="}}>=</paper-button>
+    <paper-button class="button-9" flex vertical layout{{action "setInputValue" "9"}}>9</paper-button>
+    <paper-button class="button-6" flex vertical layout{{action "setInputValue" "6"}}>6</paper-button>
+    <paper-button class="button-3" flex vertical layout{{action "setInputValue" "3"}}>3</paper-button>
+    <paper-button class="button-equals" flex vertical layout{{action "equals" "="}}>=</paper-button>
   </div>
 
   <div class="paper-button-operands" flex vertical layout>
-    <paper-button {{action "clear"}}>C</paper-button>
-    <paper-button {{action "applyOperator" "+"}}>+</paper-button>
-    <paper-button {{action "applyOperator" "-"}}>-</paper-button>
-    <paper-button {{action "applyOperator" "/"}}>/</paper-button>
-    <paper-button {{action "applyOperator" "*"}}>*</paper-button>
+    <paper-button class="button-clear" {{action "clear"}}>C</paper-button>
+    <paper-button class="button-plus" {{action "applyOperator" "+"}}>+</paper-button>
+    <paper-button class="button-minus" {{action "applyOperator" "-"}}>-</paper-button>
+    <paper-button class="button-division" {{action "applyOperator" "/"}}>/</paper-button>
+    <paper-button class="button-multiplication" {{action "applyOperator" "*"}}>*</paper-button>
   </div>
 </div>
 </div>
